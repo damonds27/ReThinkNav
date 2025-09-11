@@ -1,0 +1,1 @@
+{"episode_id": 7, "metrics": {"steps_taken": 6.0, "distance_to_goal": 0.8384623527526855, "success": 1.0, "oracle_success": 1.0, "path_length": 11.655690625419522, "collisions": 0.06382978723404255, "spl": 0.8967519959132475, "ndtw": 0.8412546215977783}, "timestamp": 1757592656.830879}
