@@ -64,7 +64,7 @@ def modify_config(config_path, output_path, new_target_episode_id):
 
     if 'DATASET' in config and 'TARGET_EPISODE_IDS' in config['DATASET']:
         config['DATASET']['TARGET_EPISODE_IDS'] = new_target_episode_id
-        print(f"TARGET_EPISODE_IDS 已更新为 {new_target_episode_id}")
+        print(f"TARGET_EPISODE_IDS is {new_target_episode_id}")
     else:
         print("Can Not Find DATASET.TARGET_EPISODE_IDS")
 

@@ -1,7 +1,0 @@
-{
-  "position_file": "/home/liaolin/project/RAG/NavRAG/instruction_generator/1LXtFkjw3qL/mp3d_view_annotation.json",
-  "viewpoint_file": "/home/liaolin/project/RAG/NavRAG/instruction_generator/1LXtFkjw3qL/mp3d_viewpoint_annotation.json",
-  "zone_file": "/home/liaolin/project/RAG/NavRAG/instruction_generator/1LXtFkjw3qL/mp3d_zone_annotation.json",
-  "connectivity_file": "/home/liaolin/project/RAG/NavRAG/instruction_generator/1LXtFkjw3qL/connectivity_mp3d(1LXtFkjw3qL_connectivity)/1LXtFkjw3qL_connectivity.json",
-  "output_file": "/home/liaolin/project/open-nav/Open-Nav/data/1LXtFkjw3qL/analysis_results.json"
-}
