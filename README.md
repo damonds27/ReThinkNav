@@ -17,8 +17,7 @@ This project builds upon [Discrete-Continuous-VLN](https://github.com/YanyuanQia
 Note: Our installation instructions are adapted from Open-Nav.
 
 ### Dataset
-
-**OpenNav_R2R-CE_100**: [Download Here](https://drive.google.com/file/d/1SfrPWqCIiivwduCYPMe-Za1wOt4eU6G9/view?usp=sharing)
+[Download Here](https://drive.google.com/file/d/1SfrPWqCIiivwduCYPMe-Za1wOt4eU6G9/view?usp=sharing)
 
 
 Please place the downloaded files under: 

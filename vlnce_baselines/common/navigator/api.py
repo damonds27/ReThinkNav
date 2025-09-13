@@ -2,7 +2,6 @@ from openai import OpenAI
 import torch
 import numpy as np
 import os
-os.environ["HF_HOME"] = "/home/liaolin/project/hfmodel"
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 
 import transformers
@@ -19,7 +18,6 @@ transformers.logging.disable_progress_bar()
 warnings.filterwarnings('ignore')
 from vlnce_baselines.common.navigator.prompts import DIRECTION_DESCRIPTIONS
 from recognize_anything.ram.models import ram
-from recognize_anything.ram.models import ram_plus
 from recognize_anything.ram import inference_ram
 from recognize_anything.ram import get_transform
 

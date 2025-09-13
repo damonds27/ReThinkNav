@@ -59,42 +59,27 @@ def main():
 
 
 def modify_config(config_path, output_path, new_target_episode_id):
-    # 读取配置文件
     with open(config_path, 'r') as f:
         config = yaml.safe_load(f)
 
-    # 修改目标字段
     if 'DATASET' in config and 'TARGET_EPISODE_IDS' in config['DATASET']:
         config['DATASET']['TARGET_EPISODE_IDS'] = new_target_episode_id
         print(f"TARGET_EPISODE_IDS 已更新为 {new_target_episode_id}")
     else:
-        print("未找到 DATASET.TARGET_EPISODE_IDS 字段，未作修改。")
+        print("Can Not Find DATASET.TARGET_EPISODE_IDS")
 
-    # 写回文件（也可以覆盖原文件）
     with open(output_path, 'w') as f:
         yaml.dump(config, f, sort_keys=False)
     
 def run_exp(exp_name: str, exp_config: str, 
             opts=None, local_rank=None,
             llm: str = None, api_key: str = None, target_episode_ids: int = 181) -> None:
-    r"""Runs experiment given mode and config
-
-    Args:
-        exp_config: path to config file.
-        run_type: "train" or "eval.
-        opts: list of strings of additional config options.
-        llm: The LLM model to be used (e.g., gpt-4o-2024-08-06).
-        api_key: API key for accessing the LLM service.
-    Returns:
-        None.
-    """
-    config_path = "/home/liaolin/project/open-nav/Open-Nav/habitat_extensions/config/vlnce_task.yaml"           # 原始配置文件路径
-    output_path = "/home/liaolin/project/open-nav/Open-Nav/habitat_extensions/config/vlnce_task.yaml"  # 修改后保存路径
-    new_target_episode_id = target_episode_ids           # 要修改的目标值
+    config_path = "habitat_extensions/config/vlnce_task.yaml"        
+    output_path = "habitat_extensions/config/vlnce_task.yaml"
+    new_target_episode_id = target_episode_ids      
     modify_config(config_path, output_path, new_target_episode_id)
     
     config = get_config(exp_config, opts)
-    # print("config: ", config)
     config.defrost()
 
     config.CHECKPOINT_FOLDER += exp_name
@@ -119,12 +104,9 @@ def run_exp(exp_name: str, exp_config: str,
 
     config.freeze()
     
-    # Check if the 'logs/running_log' directory exists; if not, create it
     log_dir = 'logs/running_log'
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
-
-    # Add the file handler for logging
     logger.add_filehandler(os.path.join(log_dir, config.LOG_FILE))
 
     random.seed(config.TASK_CONFIG.SEED)
