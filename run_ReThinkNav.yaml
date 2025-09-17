@@ -2,7 +2,7 @@ BASE_TASK_CONFIG_PATH: habitat_extensions/config/vlnce_task.yaml
 SIMULATOR_GPU_IDS: [0]
 TORCH_GPU_ID: 0
 TORCH_GPU_IDS: [0]
-TRAINER_NAME: schedulesampler-OPENNAV  
+TRAINER_NAME: schedulesampler-ReThinkNav  
 GPU_NUMBERS: 1
 NUM_ENVIRONMENTS: 1
 CHECKPOINT_FOLDER: logs/checkpoints/
